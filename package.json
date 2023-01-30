@@ -1,0 +1,21 @@
+{
+  "name": "test-hb.loc",
+  "version": "1.0.0",
+  "description": "Dolenchuk Dmitry",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.2"
+  }
+}

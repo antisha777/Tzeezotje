@@ -1,11 +1,12 @@
-
 <?php
-var_dump($_POST);
-var_dump(empty($_POST['password']));
-$login = $_POST['login'];
-$password = $_POST['password'];
-if(empty($login) || empty($password)) {
-	echo "Error";
-} else {
-	echo "Вы используете логин $login и пароль $password";
-}
+
+$recepient = "antisha6666@yandex.ru";
+$sitename = "HB";
+
+$name = trim($_POST["name"]);
+$phone = trim($_POST["phone"]);
+$message = "Имя: $name \nТелефон: $phone;
+
+$pagetitle = 'Новая заявка с сайта \"$sitename\"';
+
+mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");

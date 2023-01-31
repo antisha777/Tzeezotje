@@ -24,6 +24,8 @@
 
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.51)), url('./img/tZeezotje-51.jpg')no-repeat;
     background-size: cover;
+
+
     
     .container {
         position: relative;
@@ -86,6 +88,11 @@
     &__logo img {
         @include _570() {
             width: 220px;
+
+            @include _380() {
+                width: 180px;
+                padding-top: 5px;
+            }
         }
     }
 }
@@ -103,8 +110,6 @@
 
     &__item {
         font-size: 16px;
-        font-weight: 500;
-        transition: .15s color;
         cursor: pointer;
     }
 
@@ -132,12 +137,26 @@
 
         @include _900() {
             font-size: 38px;
-            border-bottom: 1px solid;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #D3B47F;
+            transform: translateY(3px) scale(0);
+            transition: all .2s;
         }
 
         &:hover {
-            transition: .5s;
             font-weight: 600;
+            text-decoration: none;
+
+            &::after {
+                transform: translateY(3px) scale(1);
+            }
+
         }
     }
 }
@@ -251,6 +270,11 @@
 
     @include _900() {
         padding: 0;
+    }
+
+    &__item {
+        width: 48px;
+        height: 48px;
     }
 
     &__link:hover {
@@ -384,8 +408,11 @@
         margin: 51px 0 0 129px;
 
         @include _950() {
-            margin-left: 0px;
             width: 350px;
+
+            @include _768() {
+                margin-left: 0;
+            }
 
             @include _480() {
                 width: 260px;

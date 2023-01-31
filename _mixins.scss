@@ -70,6 +70,12 @@
     }
 }
 
+@mixin _380 {
+    @media only screen and (max-width: 380px) { 
+        @content;
+    }
+}
+
 @mixin _320 {
     @media only screen and (max-width: 320px) { 
         @content;

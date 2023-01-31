@@ -120,6 +120,12 @@ button {
     width: 220px;
   }
 }
+@media only screen and (max-width: 570px) and (max-width: 380px) {
+  .header__logo img {
+    width: 180px;
+    padding-top: 5px;
+  }
+}
 
 .navigation__item:not(:last-child) {
   margin-right: 45px;
@@ -132,8 +138,6 @@ button {
 }
 .navigation__item {
   font-size: 16px;
-  font-weight: 500;
-  transition: 0.15s color;
   cursor: pointer;
 }
 .navigation__list {
@@ -162,12 +166,23 @@ button {
 @media only screen and (max-width: 900px) {
   .navigation__link {
     font-size: 38px;
-    border-bottom: 1px solid;
   }
 }
+.navigation__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #D3B47F;
+  transform: translateY(3px) scale(0);
+  transition: all 0.2s;
+}
 .navigation__link:hover {
-  transition: 0.5s;
   font-weight: 600;
+  text-decoration: none;
+}
+.navigation__link:hover::after {
+  transform: translateY(3px) scale(1);
 }
 
 .header-phone {
@@ -270,6 +285,10 @@ button {
   .social {
     padding: 0;
   }
+}
+.social__item {
+  width: 48px;
+  height: 48px;
 }
 .social__link:hover {
   transition: 0.5s;
@@ -394,8 +413,12 @@ button {
 }
 @media only screen and (max-width: 950px) {
   .about__frame {
-    margin-left: 0px;
     width: 350px;
+  }
+}
+@media only screen and (max-width: 950px) and (max-width: 768px) {
+  .about__frame {
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 950px) and (max-width: 480px) {
